@@ -78,10 +78,24 @@ function Button({
     asChild?: boolean
     loading?: boolean
   }) {
-  const Comp = asChild ? Slot.Root : "button"
+  // When asChild is true, Slot expects exactly one child element
+  // Loading state is not supported with asChild
+  if (asChild) {
+    return (
+      <Slot.Root
+        data-slot="button"
+        data-variant={variant}
+        data-size={size}
+        className={cn(buttonVariants({ variant, size, className }))}
+        {...props}
+      >
+        {children}
+      </Slot.Root>
+    )
+  }
 
   return (
-    <Comp
+    <button
       data-slot="button"
       data-variant={variant}
       data-size={size}
@@ -91,7 +105,7 @@ function Button({
     >
       {loading && <Spinner className="size-4" />}
       {children}
-    </Comp>
+    </button>
   )
 }
 
