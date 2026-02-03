@@ -1,0 +1,244 @@
+{
+  "incentives": [
+    {
+      "id": "fed-25c-heat-pump",
+      "layer": "federal",
+      "name": "25C Heat Pump Tax Credit",
+      "description": "Federal tax credit for qualifying heat pump installations. Claimed on your annual tax return.",
+      "dollar_amount": null,
+      "percentage_amount": 30,
+      "max_amount": 2000,
+      "upgrade_categories": ["heat_pump"],
+      "state_code": null,
+      "utility_name": null,
+      "income_threshold_type": "none",
+      "home_types": ["single_family", "condo", "manufactured"],
+      "ownership_required": true,
+      "stacking_rules": {
+        "combinable_with": ["state", "utility", "manufacturer"],
+        "excluded_with": []
+      },
+      "status": "active",
+      "effective_date": "2023-01-01",
+      "expiration_date": "2032-12-31",
+      "claim_type": "tax_credit",
+      "claim_steps": [
+        "Purchase qualifying heat pump",
+        "Get IRS Form 5695",
+        "File with your tax return"
+      ],
+      "claim_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
+      "source_url": "https://www.irs.gov"
+    },
+    {
+      "id": "fed-25c-water-heater",
+      "layer": "federal",
+      "name": "25C Water Heater Tax Credit",
+      "description": "Federal tax credit for heat pump water heaters meeting ENERGY STAR efficiency requirements.",
+      "dollar_amount": null,
+      "percentage_amount": 30,
+      "max_amount": 2000,
+      "upgrade_categories": ["heat_pump_water_heater"],
+      "state_code": null,
+      "utility_name": null,
+      "income_threshold_type": "none",
+      "home_types": ["single_family", "condo", "manufactured"],
+      "ownership_required": true,
+      "stacking_rules": {
+        "combinable_with": ["state", "utility", "manufacturer"],
+        "excluded_with": []
+      },
+      "status": "active",
+      "effective_date": "2023-01-01",
+      "expiration_date": "2032-12-31",
+      "claim_type": "tax_credit",
+      "claim_steps": [
+        "Purchase qualifying water heater",
+        "Get IRS Form 5695",
+        "File with your tax return"
+      ],
+      "claim_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
+      "source_url": "https://www.irs.gov"
+    },
+    {
+      "id": "fed-25c-insulation",
+      "layer": "federal",
+      "name": "25C Insulation & Air Sealing Credit",
+      "description": "Federal tax credit for insulation and air sealing improvements that meet efficiency standards.",
+      "dollar_amount": null,
+      "percentage_amount": 30,
+      "max_amount": 1200,
+      "upgrade_categories": ["insulation", "weatherization"],
+      "state_code": null,
+      "utility_name": null,
+      "income_threshold_type": "none",
+      "home_types": ["single_family", "condo", "manufactured"],
+      "ownership_required": true,
+      "stacking_rules": {
+        "combinable_with": ["state", "utility", "manufacturer"],
+        "excluded_with": []
+      },
+      "status": "active",
+      "effective_date": "2023-01-01",
+      "expiration_date": "2032-12-31",
+      "claim_type": "tax_credit",
+      "claim_steps": [
+        "Complete qualifying improvements",
+        "Keep receipts and certifications",
+        "File IRS Form 5695 with tax return"
+      ],
+      "claim_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
+      "source_url": "https://www.irs.gov"
+    },
+    {
+      "id": "fed-25c-windows",
+      "layer": "federal",
+      "name": "25C Windows & Doors Credit",
+      "description": "Federal tax credit for ENERGY STAR certified windows, skylights, and exterior doors.",
+      "dollar_amount": null,
+      "percentage_amount": 30,
+      "max_amount": 600,
+      "upgrade_categories": ["windows"],
+      "state_code": null,
+      "utility_name": null,
+      "income_threshold_type": "none",
+      "home_types": ["single_family", "condo", "manufactured"],
+      "ownership_required": true,
+      "stacking_rules": {
+        "combinable_with": ["state", "utility", "manufacturer"],
+        "excluded_with": []
+      },
+      "status": "active",
+      "effective_date": "2023-01-01",
+      "expiration_date": "2032-12-31",
+      "claim_type": "tax_credit",
+      "claim_steps": [
+        "Purchase ENERGY STAR certified products",
+        "Keep manufacturer certifications",
+        "File IRS Form 5695 with tax return"
+      ],
+      "claim_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
+      "source_url": "https://www.irs.gov"
+    },
+    {
+      "id": "fed-25c-electrical-panel",
+      "layer": "federal",
+      "name": "25C Electrical Panel Credit",
+      "description": "Federal tax credit for electrical panel upgrades that enable electrification.",
+      "dollar_amount": null,
+      "percentage_amount": 30,
+      "max_amount": 600,
+      "upgrade_categories": ["electrical_panel"],
+      "state_code": null,
+      "utility_name": null,
+      "income_threshold_type": "none",
+      "home_types": ["single_family", "condo", "manufactured"],
+      "ownership_required": true,
+      "stacking_rules": {
+        "combinable_with": ["state", "utility", "manufacturer"],
+        "excluded_with": []
+      },
+      "status": "active",
+      "effective_date": "2023-01-01",
+      "expiration_date": "2032-12-31",
+      "claim_type": "tax_credit",
+      "claim_steps": [
+        "Upgrade to 200-amp panel",
+        "Keep contractor invoices",
+        "File IRS Form 5695 with tax return"
+      ],
+      "claim_url": "https://www.irs.gov/credits-deductions/energy-efficient-home-improvement-credit",
+      "source_url": "https://www.irs.gov"
+    },
+    {
+      "id": "fed-25d-solar",
+      "layer": "federal",
+      "name": "25D Residential Clean Energy Credit (Solar)",
+      "description": "Federal tax credit for residential solar panel installations. No maximum limit.",
+      "dollar_amount": null,
+      "percentage_amount": 30,
+      "max_amount": null,
+      "upgrade_categories": ["solar"],
+      "state_code": null,
+      "utility_name": null,
+      "income_threshold_type": "none",
+      "home_types": ["single_family", "condo", "manufactured"],
+      "ownership_required": true,
+      "stacking_rules": {
+        "combinable_with": ["state", "utility", "manufacturer"],
+        "excluded_with": []
+      },
+      "status": "active",
+      "effective_date": "2023-01-01",
+      "expiration_date": "2034-12-31",
+      "claim_type": "tax_credit",
+      "claim_steps": [
+        "Install qualifying solar system",
+        "Obtain Form 5695 from installer",
+        "Claim on federal tax return"
+      ],
+      "claim_url": "https://www.irs.gov/credits-deductions/residential-clean-energy-credit",
+      "source_url": "https://www.irs.gov"
+    },
+    {
+      "id": "fed-25d-battery",
+      "layer": "federal",
+      "name": "25D Residential Clean Energy Credit (Battery)",
+      "description": "Federal tax credit for home battery storage systems 3 kWh or greater capacity.",
+      "dollar_amount": null,
+      "percentage_amount": 30,
+      "max_amount": null,
+      "upgrade_categories": ["battery"],
+      "state_code": null,
+      "utility_name": null,
+      "income_threshold_type": "none",
+      "home_types": ["single_family", "condo", "manufactured"],
+      "ownership_required": true,
+      "stacking_rules": {
+        "combinable_with": ["state", "utility", "manufacturer"],
+        "excluded_with": []
+      },
+      "status": "active",
+      "effective_date": "2023-01-01",
+      "expiration_date": "2034-12-31",
+      "claim_type": "tax_credit",
+      "claim_steps": [
+        "Install qualifying battery system",
+        "Obtain manufacturer specifications",
+        "Claim on federal tax return"
+      ],
+      "claim_url": "https://www.irs.gov/credits-deductions/residential-clean-energy-credit",
+      "source_url": "https://www.irs.gov"
+    },
+    {
+      "id": "fed-30c-ev-charger",
+      "layer": "federal",
+      "name": "30C EV Charger Tax Credit",
+      "description": "Federal tax credit for home EV charging equipment installation in eligible census tracts.",
+      "dollar_amount": null,
+      "percentage_amount": 30,
+      "max_amount": 1000,
+      "upgrade_categories": ["ev_charger"],
+      "state_code": null,
+      "utility_name": null,
+      "income_threshold_type": "none",
+      "home_types": ["single_family", "condo", "manufactured"],
+      "ownership_required": true,
+      "stacking_rules": {
+        "combinable_with": ["state", "utility", "manufacturer"],
+        "excluded_with": []
+      },
+      "status": "active",
+      "effective_date": "2023-01-01",
+      "expiration_date": "2032-12-31",
+      "claim_type": "tax_credit",
+      "claim_steps": [
+        "Verify census tract eligibility",
+        "Install qualifying charger",
+        "File IRS Form 8911 with tax return"
+      ],
+      "claim_url": "https://www.irs.gov/credits-deductions/alternative-fuel-vehicle-refueling-property-credit",
+      "source_url": "https://www.irs.gov"
+    }
+  ]
+}

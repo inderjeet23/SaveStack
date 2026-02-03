@@ -1,0 +1,94 @@
+{
+  "state_programs": [
+    {
+      "state_code": "CA",
+      "state_name": "California",
+      "homes_status": "live",
+      "heehra_status": "live",
+      "homes_launch_date": "2024-01-15",
+      "heehra_launch_date": "2024-03-01",
+      "program_notes": "Programs active through GoGreenFinancing.com and Switch Is On"
+    },
+    {
+      "state_code": "NY",
+      "state_name": "New York",
+      "homes_status": "live",
+      "heehra_status": "pending",
+      "homes_launch_date": "2024-06-01",
+      "heehra_launch_date": null,
+      "program_notes": "HOMES live via NYSERDA; HEEHRA expected Q3 2026"
+    },
+    {
+      "state_code": "CO",
+      "state_name": "Colorado",
+      "homes_status": "live",
+      "heehra_status": "live",
+      "homes_launch_date": "2024-04-01",
+      "heehra_launch_date": "2024-07-01",
+      "program_notes": "Programs administered by Colorado Energy Office"
+    },
+    {
+      "state_code": "MI",
+      "state_name": "Michigan",
+      "homes_status": "pending",
+      "heehra_status": "pending",
+      "homes_launch_date": null,
+      "heehra_launch_date": null,
+      "program_notes": "Programs expected Q2 2026 via Michigan EGLE"
+    },
+    {
+      "state_code": "NC",
+      "state_name": "North Carolina",
+      "homes_status": "pending",
+      "heehra_status": "pending",
+      "homes_launch_date": null,
+      "heehra_launch_date": null,
+      "program_notes": "Programs in development through NC DEQ"
+    },
+    {
+      "state_code": "GA",
+      "state_name": "Georgia",
+      "homes_status": "pending",
+      "heehra_status": "pending",
+      "homes_launch_date": null,
+      "heehra_launch_date": null,
+      "program_notes": "Programs expected 2026 via Georgia Environmental Finance Authority"
+    },
+    {
+      "state_code": "AZ",
+      "state_name": "Arizona",
+      "homes_status": "pending",
+      "heehra_status": "pending",
+      "homes_launch_date": null,
+      "heehra_launch_date": null,
+      "program_notes": "Programs in development through Arizona Department of Housing"
+    },
+    {
+      "state_code": "WA",
+      "state_name": "Washington",
+      "homes_status": "live",
+      "heehra_status": "pending",
+      "homes_launch_date": "2024-09-01",
+      "heehra_launch_date": null,
+      "program_notes": "HOMES live via Washington State Dept of Commerce"
+    },
+    {
+      "state_code": "ME",
+      "state_name": "Maine",
+      "homes_status": "live",
+      "heehra_status": "pending",
+      "homes_launch_date": "2024-02-01",
+      "heehra_launch_date": null,
+      "program_notes": "HOMES live via Efficiency Maine"
+    },
+    {
+      "state_code": "WI",
+      "state_name": "Wisconsin",
+      "homes_status": "pending",
+      "heehra_status": "pending",
+      "homes_launch_date": null,
+      "heehra_launch_date": null,
+      "program_notes": "Programs expected 2026 via Focus on Energy"
+    }
+  ]
+}
