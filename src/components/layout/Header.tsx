@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/theme-toggle';
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -40,19 +41,22 @@ export function Header() {
           </Link>
         </nav>
 
-        {/* CTA Button */}
-        <div className="hidden md:flex items-center space-x-4">
+        {/* CTA Button + Theme Toggle */}
+        <div className="hidden md:flex items-center space-x-2">
+          <ThemeToggle />
           <Button asChild>
             <Link href="/calculator">Find My Savings</Link>
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden p-2"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label="Toggle menu"
-        >
+        {/* Mobile: Theme Toggle + Menu Button */}
+        <div className="md:hidden flex items-center space-x-1">
+          <ThemeToggle />
+          <button
+            className="p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
           <svg
             className="h-6 w-6"
             fill="none"
@@ -75,7 +79,8 @@ export function Header() {
               />
             )}
           </svg>
-        </button>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
