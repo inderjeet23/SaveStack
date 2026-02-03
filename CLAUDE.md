@@ -1,5 +1,25 @@
 # SaveStack - Project Context
 
+## GitHub Workflow (IMPORTANT)
+
+**Repository:** https://github.com/inderjeet23/SaveStack.git
+
+### At Session Start
+```bash
+git pull origin main
+```
+Always pull latest changes before starting work.
+
+### After Making Changes
+```bash
+git add -A && git commit -m "Description of changes
+
+Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>" && git push
+```
+Push changes after completing a feature or fix. Netlify auto-deploys on push.
+
+---
+
 ## What This Project Is
 SaveStack is a web-based home energy incentive calculator that aggregates rebates and tax credits across 5 layers:
 - Federal tax credits (25C/25D)
@@ -10,13 +30,13 @@ SaveStack is a web-based home energy incentive calculator that aggregates rebate
 Users enter their zip code, income, home type, and desired upgrades to see personalized savings.
 
 ## Tech Stack
-- **Framework**: Next.js 14 (App Router)
-- **Database**: Supabase (PostgreSQL) - NOT YET SET UP
+- **Framework**: Next.js 16 (App Router)
+- **Database**: Supabase (PostgreSQL) - Connected
 - **Styling**: Tailwind CSS + shadcn/ui
-- **Hosting**: Vercel (planned)
+- **Hosting**: Netlify (auto-deploys from GitHub)
 
 ## Current Status
-MVP code is complete and builds successfully. **Supabase needs to be set up.**
+MVP is deployed. Dark mode working. **Database needs real incentive data.**
 
 ### What's Built
 - Landing page with hero, features, upgrade categories
@@ -24,13 +44,13 @@ MVP code is complete and builds successfully. **Supabase needs to be set up.**
 - URL-based results page (shareable links)
 - Eligibility calculation engine with AMI/income checks
 - Stacking logic for combining incentives
-- Mock incentive data for demo purposes
+- Dark mode toggle
+- Netlify deployment
 
 ### What's Needed
-1. **Create Supabase project** - Use MCP to create project called "savestack"
-2. **Run database migration** - Execute `supabase/migrations/001_initial_schema.sql`
-3. **Update .env.local** - Add real Supabase URL and anon key
-4. **Seed real incentive data** - Research and add actual incentives for 10 launch states
+1. **Seed real incentive data** - Federal 25C/25D credits + state IRA rebates
+2. **Seed AMI thresholds** - Zip code to state mapping + income thresholds
+3. **Fix zip-to-state lookup** - Currently defaults to CA (needs AMI data)
 
 ## Key Files
 
@@ -40,16 +60,18 @@ src/app/
 ├── page.tsx              # Landing page
 ├── calculator/page.tsx   # Multi-step form
 ├── results/page.tsx      # Results with URL params
-└── layout.tsx            # Root layout with Header/Footer
+└── layout.tsx            # Root layout with Header/Footer/ThemeProvider
 ```
 
 ### Components
 ```
 src/components/
 ├── calculator/           # ZipCodeInput, HouseholdSelector, UpgradeSelector
-├── results/              # IncentiveCard, TotalSavings, ResultsGrid
+├── results/              # IncentiveCard, TotalSavings, ResultsGrid, CopyLinkButton
 ├── layout/               # Header, Footer
-└── ui/                   # shadcn components
+├── ui/                   # shadcn components
+├── theme-provider.tsx    # next-themes provider
+└── theme-toggle.tsx      # Dark mode toggle
 ```
 
 ### Core Logic
@@ -68,6 +90,12 @@ src/lib/
 - Schema: `supabase/migrations/001_initial_schema.sql`
 - Tables: `incentives`, `state_programs`, `ami_thresholds`, `upgrade_categories`, `email_subscribers`
 
+### Environment Variables
+Located in `.env.local` (not committed):
+- `NEXT_PUBLIC_SUPABASE_URL`
+- `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+- `SUPABASE_SERVICE_ROLE_KEY`
+
 ### Types
 - All TypeScript interfaces: `src/types/index.ts`
 
@@ -75,14 +103,13 @@ src/lib/
 ```bash
 npm run dev      # Start dev server
 npm run build    # Build for production
+git pull         # Get latest from GitHub
+git push         # Deploy to Netlify (auto)
 ```
 
-## Next Steps After Supabase Setup
-1. Run migration to create tables
-2. Seed state_programs data (10 launch states)
-3. Seed incentive data (federal + state for CA, NY, CO, etc.)
-4. Update results page to fetch from Supabase instead of mock data
-5. Deploy to Vercel
+## Supabase
+- Project: `qetjtpecxrdhvlkhangi`
+- Dashboard: https://supabase.com/dashboard/project/qetjtpecxrdhvlkhangi
 
 ## PRD Reference
 Full PRD is at: `/Users/inder/Documents/SaveStack/SaveStack_PRD.docx`
