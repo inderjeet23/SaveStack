@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { StepIndicator } from './StepIndicator';
 import { ZipCodeInput } from './ZipCodeInput';
@@ -283,6 +283,11 @@ export function CalculatorForm({ initialData }: CalculatorFormProps) {
 
   // Derived state
   const detectedState = zipCode.length >= 3 ? getStateFromZip(zipCode) : undefined;
+
+  // Scroll to top when step changes for better mobile UX
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  }, [step]);
 
   const goToResults = useCallback(() => {
     // Build URL params for shareable results
